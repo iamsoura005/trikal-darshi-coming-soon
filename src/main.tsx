@@ -14,7 +14,7 @@ function App() {
       <section className="hero">
         <img className="wheel" src={asset('wheel.png')} alt="" aria-hidden="true" />
         <div className="copy">
-          <h1 id="coming-title"><span className="line line-one">Something Cosmic</span><span className="line line-two">Is Coming</span></h1>
+          <h1 id="coming-title"><span className="line line-one">Something <span className="cosmic-word">Cosmic</span></span><span className="line line-two">Is Coming</span></h1>
         </div>
       </section>
       <p className="copyright">© 2026 Trikal Darshi. All rights reserved.</p>

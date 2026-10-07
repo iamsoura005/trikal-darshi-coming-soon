@@ -14,6 +14,7 @@ body { overflow: hidden; }
 .copy { position: relative; text-align: center; margin-top: clamp(10px, 3vh, 32px); }
 h1 { margin: 0; color: #fff2bf; font-size: clamp(44px, 6.1vw, 116px); line-height: .92; letter-spacing: -.075em; font-weight: 800; text-shadow: 0 2px 18px rgba(255, 221, 143, .08); }
 h1 .line { display: block; opacity: 0; transform: translateY(28px); animation: text-reveal 1s cubic-bezier(.22,1,.36,1) forwards; }
+h1 .cosmic-word { display: inline-block; opacity: 0; transform: translateY(18px) scale(.94); animation: cosmic-reveal .9s .55s cubic-bezier(.22,1,.36,1) forwards; }
 h1 .line-two { margin-top: clamp(17px, 2.7vh, 31px); font-size: .68em; letter-spacing: -.06em; animation-delay: .22s; }
 .copyright { position: absolute; z-index: 2; bottom: clamp(23px, 8.6vh, 92px); left: 50%; transform: translateX(-50%); margin: 0; color: rgba(196, 197, 179, .53); font-size: 9px; letter-spacing: -.01em; white-space: nowrap; }
 .powered { position: absolute; z-index: 2; right: clamp(24px, 3.4vw, 65px); bottom: clamp(28px, 11.6vh, 125px); display: flex; flex-direction: column; align-items: flex-end; gap: 2px; color: rgba(255,255,255,.68); font-size: 12px; }
@@ -21,6 +22,7 @@ h1 .line-two { margin-top: clamp(17px, 2.7vh, 31px); font-size: .68em; letter-sp
 @keyframes drop { from { opacity: 0; transform: translate(-50%, -12px); } to { opacity: 1; transform: translate(-50%, 0); } }
 @keyframes rise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes text-reveal { 0% { opacity: 0; transform: translateY(28px); filter: blur(10px); } 65% { opacity: 1; filter: blur(0); } 100% { opacity: 1; transform: translateY(0); filter: blur(0); } }
+@keyframes cosmic-reveal { 0% { opacity: 0; transform: translateY(18px) scale(.94); filter: blur(12px); } 60% { opacity: 1; transform: translateY(-3px) scale(1.03); filter: blur(0); } 100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); } }
 @keyframes breathe { 0%,100% { transform: scale(1) rotate(0deg); opacity: .78; } 50% { transform: scale(1.025) rotate(.4deg); opacity: .88; } }
 @media (max-width: 600px) { body { overflow: hidden; } .cosmos { background-position: center; } .brand { top: 5.5vh; width: 165px; } .hero { height: 75svh; } .wheel { width: 92vw; max-width: 520px; } .copy { margin-top: 2vh; } h1 { font-size: clamp(43px, 12vw, 72px); line-height: .94; } h1 span { margin-top: 19px; } .powered { right: 20px; bottom: 10.5vh; font-size: 9px; } .powered img { width: 102px; } .copyright { bottom: 3.7vh; font-size: 7px; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; } }
